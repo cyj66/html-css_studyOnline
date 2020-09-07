@@ -1,0 +1,431 @@
+*{
+	margin:0;
+	padding:0;
+}
+.w{                             /* 版心 */
+	width:1200px;
+	margin:auto;        /* margin:0 auto也可，水平居中 */
+}
+body{
+	background-color: #f3f5f7;     /* 整个背景颜色 */
+}
+
+
+
+.header{
+	height:42px;
+	margin:30px auto;  /* 注意此地方会层叠w里面的margin */
+}
+.logo{
+	float:left;
+	width:198px;
+	height:42px;
+}
+
+
+li{
+	list-style:none;
+}
+.nav{
+	float:left;       /* 一浮全浮 */
+	margin-left: 60px;
+}
+.nav ul li{         /* li是块级元素,要让其水平排列则对li设置 */
+	float:left;
+	margin:0 15px;
+}
+.nav ul li a{
+	display:block;
+	height:42px;
+	padding:0 10px;
+	line-height: 42px;
+	font-size: 18px;
+	color:#050505;
+}
+a{
+	text-decoration: none;
+}
+.nav ul li a:hover{
+	border-bottom: 2px solid #00a4ff;
+	color:#00a4ff;
+}
+
+.search{
+	float:left;
+	width:412px;
+	height:42px;
+	margin-left: 70px;
+}
+.search input{
+	float:left;
+	width:345px;
+	height: 40px;
+	border:1px solid #00a4ff;
+	border-right: 0;
+	font-size:14px;
+	color:#bfbfbf;
+	padding-left: 15px;    /* 本来width为360px,由于此处导致width变大15px,所以width要减15变为345px */
+}
+.search button{
+	float:left;  /* 与上面的input同为行内块元素,如果不加浮动会行内块之间默认有一定间隙,加浮动则没有间隙 */
+	width:50px;
+	height:42px;
+	border:0;    /* button默认有边框,需要手动去除 */
+	background: url(image/btn.png);
+}
+
+.user{
+	float:right;
+	line-height: 42px;
+	margin-right: 30px;
+	font-size:14px;
+	color:#666;
+}
+.user img{
+	vertical-align:middle;  /* 图片与文字居中对齐 */
+}
+
+
+.banner{
+	height: 421px;
+	background-color: #1c036c;
+}
+.banner .w{
+	height: 421px;
+	background: url(image/banner.png) no-repeat top center;
+}
+
+.subnav{
+	float: left;
+	height:421px;
+	width:190px;
+	background:rgba(0,0,0,.3);
+}
+.subnav ul li a{
+	font-size:14px;
+	color:white;
+}
+.subnav ul li{
+	height:45px;     /* 不设置a是因为a是行内元素没有高度 */
+	line-height: 45px;
+	padding:0 20px;
+}
+.subnav ul li a span{
+	float:right;
+}
+.subnav ul li a:hover{
+	color:#00a4ff;
+}
+
+.course{
+	float: right;
+	width: 300px;
+	width: 230px;
+	margin-top: 50px; /* 浮动的盒子不会有外边距合并的问题 */
+	background-color: #fff;
+}
+.course h2{
+	height: 48px;
+	background-color: #9bceea;
+	text-align: center;
+	line-height: 48px;
+	font-size:18px;
+	color:white;
+}
+.course .bd{
+	padding: 0 20px;
+}
+.bd ul li h4{
+	font-size: 16px;
+	color:#4e4e4e;
+}
+.bd ul li p{
+	font-size: 12px;
+	color:#a5a5a5;
+}
+.bd ul li{
+	padding:14px 0;
+	border-bottom: 1px solid #ccc;
+}
+.bd a{
+	display:block;
+	height: 38px;
+	border:1px solid #00a4ff;
+	text-align: center;
+	line-height: 38px;
+	color:#00a4ff;
+	font-style: 16px;
+	font-weight: 700;
+	margin: 5px 0;
+}
+
+
+.goods{
+	height: 60px;
+	margin-top: 10px;
+	box-shadow:0 2px 3px 3px rgba(0,0,0,.1);
+	line-height: 60px;   /* 行高会继承给孩子 */
+}
+.goods h3{
+	float: left;
+	margin:0 30px;
+	font-size: 16px;
+	color:#00a4ff;	
+}
+/* .good ul{ 
+	float: left;        可以直接给li浮动
+} */
+.goods ul li{
+	float: left;
+}
+.goods ul li a{       /* a为行内元素,不可浮动 */
+	padding:0 30px;
+	font-size: 16px;
+	color:#050505;
+	border-left: 1px solid #ccc;
+}
+.mod{
+	float: right;
+	margin-right: 30px;
+	font-size: 14px;
+	color:#00a4ff;	
+}
+
+
+.box{
+	margin-top: 30px;		
+}
+.box-hd{
+	height: 45px;
+}
+.box-hd h3{
+	float: left;
+	font-size:20px;
+	color:#494949;
+	
+}
+.box-hd a{
+	float: right;
+	font-size:12px;
+	color:#a5a5a5;
+	margin-top: 10px;
+	margin-right: 30px;
+}
+/* 把li的父亲ul修改得足够宽一行能装5个盒子就不会换行了,注:习惯性在定义盒子之后给个背景纯色好判断 */
+.box-bd ul{
+	width: 1225px;
+}
+.box-bd ul li{
+	position:relative;
+	float: left;
+	width: 228px;	
+	height: 270px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	background-color: #fff;
+}
+.box-bd ul li>img{
+	width:100%;
+}
+.box-bd ul li em{
+	position:absolute;
+	top: 4px;
+	right: -4px;
+}
+.box-bd ul li h4{
+	margin: 20px 20px 20px 25px;
+	font-size:14px;
+	color:#050505;
+	font-weight: 400;
+}
+.box-bd ul li .info{
+	margin: 0 20px 0 25px;
+	font-size:12px;
+	color:#999;
+	
+}
+.box-bd ul li .info span{
+	color:#ff7c2d
+}
+
+
+/* 双伪元素法清除浮动 */
+.clearfix:before,.clearfix:after{
+	content:"";
+	display: table;
+}
+.clearfix:after{
+	clear: both;
+}
+.clear{
+	*zoom:1;
+}
+
+
+
+
+.aside{
+	position:absolute;
+	left: 152px;
+	top: 915px;
+	background-color: #fff;	
+}
+.aside ul {
+	margin-right: 25px;
+}
+.aside ul li{
+	margin:25px 0 25px 25px;
+	font-size:14px;
+}
+.aside ul li a{
+	color:#080808;
+}
+.aside ul li a:hover{
+	color:#00a4ff;
+}
+
+
+.init,.data,.robot{
+	margin-top: 40px;
+}
+.init .hd,.data .hd,.robot .hd{
+	height: 43px;	
+}
+.init .hd h4,.data .hd h4,.robot .hd h4{
+	float: left;
+	font-size:20px;
+	color:#494949;
+	font-weight: 400;
+}
+.init .hd ul,.data .hd ul,.robot .hd ul{
+	float: left;
+	margin-left: 200px;
+}
+.init .hd ul li,.data .hd ul li,.robot .hd ul li{
+	float: left;
+	margin:0 70px; 
+}
+.init .hd ul li a,.data .hd ul li a,.robot .hd ul li a{
+	color:#868686;
+	font-size:16px;
+}
+.init .hd ul li a:hover,.data .hd ul li a:hover,.robot .hd ul li a:hover{
+	color:#00a4ff;
+}
+.init .hd a,.data .hd a,.robot .hd a{
+	float: right;
+	color:#868686;
+	font-size:12px;
+}
+
+
+.init .bd .bdleft,.data .bd .bdleft{
+	float: left;
+}
+.init .bd .bdright .righttop,.data .bd .bdright .righttop{
+	float: left;
+	width: 955px;
+	height: 100px;
+	margin-left: 15px;
+}
+.init .bd .bdright ul,.data .bd .bdright ul{
+	margin-top: 16px;
+	float: left;	
+}
+.init .bd .bdright ul li,.data .bd .bdright ul li{
+	float: left;
+	width: 227px;
+	height: 250px;
+	margin-left: 15px;
+	background-color: #fff
+}
+.init .bd .bdright ul li img,.data .bd .bdright ul li img{
+	width:100%;	
+}
+.init .bd .bdright ul li h5,.data .bd .bdright ul li h5{
+	margin:25px 20px 20px 25px;
+	font-size:14px;
+	color:#050505;
+	font-weight: 400;
+}
+.init .bd .bdright ul li p,.data .bd .bdright ul li p{
+	margin-left: 25px;
+	font-size:12px;
+	color:#999999;
+}
+.init .bd .bdright ul li p span,.data .bd .bdright ul li p span{
+	color:#ff7c2d;
+}
+
+
+.robot .bd ul{
+	width: 1225px;
+}
+.robot .bd ul li{
+	float: left;
+	margin-right: 15px;
+	width: 229px;
+	height: 270px;
+	background-color: #fff;
+}
+.robot .bd ul li img{
+	width:100%;	
+}
+.robot .bd ul li h5{
+	margin:25px 20px 20px 25px;
+	font-size:14px;
+	color:#050505;
+	font-weight: 400;
+}
+.robot .bd ul li p{
+	margin-left: 25px;
+	font-size:12px;
+	color:#999999;
+}
+.robot .bd ul li p span{
+	color:#ff7c2d;
+}
+
+
+.footer{
+	height: 400px;
+	background-color: #fff;
+	margin-top: 40px;
+}
+.footer .w{
+	padding-top: 35px;
+}
+.copyright{
+	float: left;
+}
+.links{
+	float: right;
+}
+.copyright p{
+	font-size:12px;
+	color:#666;
+	margin:20px 0 15px 0;
+}
+.copyright a{
+	display: block;
+	width: 118px;
+	height: 33px;
+	border:1px solid #00a4ff;
+	text-align: center;
+	font-size:16px;
+	line-height: 33px;
+	color:#00a4ff;	
+}
+.links dl dt{
+	font-size:16px;
+	color:#333;
+	margin-bottom: 5px;
+}
+.links dl dd a{
+	font-size:12x;
+	color:#333;
+}
+.links dl{
+	float: left;
+	margin-left: 100px;
+}
